@@ -1,3 +1,4 @@
+#include <string>
 #include <gtest/gtest.h>
 #include "Test_GoogleTest.hpp"
 
@@ -12,4 +13,13 @@ TEST_F( Test_MyGtest, MY_GTEST_01 )
 	testClass->SetNum2( 100 );
 
 	EXPECT_TRUE( testClass->is_Same_number( testClass->GetNum1(), testClass->GetNum2() ) );
+}
+
+// GTEST »Æ¿Œ.
+TEST_F( Test_MyGtest, MY_GTEST_02 )
+{
+	std::string str1 = "GoogleTest";
+	std::string str2 = "GoogleTest";
+
+	EXPECT_EQ( str1, str2 );
 }
